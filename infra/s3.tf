@@ -6,15 +6,15 @@ resource "aws_s3_bucket" "raw_survey_data_bucket" {
 
 # S3 bucket configuration: ownership controls, ACL, and event notifications
 
-resource "aws_s3_bucket_ownership_controls" "ownership_controls" {
+resource "aws_s3_bucket_ownership_controls" "bucket_ownership_controls" {
   bucket = aws_s3_bucket.raw_survey_data_bucket.id
   rule {
     object_ownership = "BucketOwnerPreferred"
   }
 }
 
-resource "aws_s3_bucket_acl" "raw_survey_data_bucket_acl" {
-  depends_on = [aws_s3_bucket_ownership_controls.ownership_controls]
+resource "aws_s3_bucket_acl" "bucket_acl" {
+  depends_on = [aws_s3_bucket_ownership_controls.bucket_ownership_controls]
 
   bucket = aws_s3_bucket.raw_survey_data_bucket.id
   acl    = "private"

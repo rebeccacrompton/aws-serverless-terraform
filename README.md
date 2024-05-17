@@ -4,8 +4,8 @@ This project demonstrates using Terraform to deploy AWS resources and GitHub Act
 
 ## Project structure
 - `infra/`: Contains all Terraform code for defining AWS infrastructure.
-- `.github\`: Contains GitHub Actions workflows for deploying Terraform resources.
-- `src\`: Contains source code for Lambda functions and state machines.
+- `.github/`: Contains GitHub Actions workflows for deploying Terraform resources.
+- `src/`: Contains source code for Lambda functions and state machines.
 
 ## GitHub secrets
 The repository is configured with the following GitHub secrets for securely accessing AWS:

@@ -51,6 +51,7 @@ resource "aws_iam_role_policy_attachment" "lambda_basic_execution_policy_attachm
 
 # Terraform data block to create a zip archive of the Lambda function code
 data "archive_file" "lambda_zip" {
+  excludes    = ["**/*.md"]
   type        = "zip"
   source_dir  = "${path.module}/../src/lambdas/simple-lambda"
   output_path = "${path.module}/../src/lambdas/simple-lambda/simple_lambda.zip"

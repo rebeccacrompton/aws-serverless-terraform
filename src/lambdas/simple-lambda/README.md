@@ -8,7 +8,7 @@ The lambda function is designed to be lightweight and doesn't require any extern
 The Lambda function requires specific permissions to perform its tasks. These permissions are managed through IAM (Identity and Access Management) roles and policies.
 
 **IAM Policies**
-- `lambda_s3_readonly_policy`: Grants the Lambda function the necessary permissions to read from S3 buckets by allowing the s3:ListBucket action.
+- `lambda_s3_readonly_policy`: Grants the Lambda function the necessary permissions to read from S3 buckets by allowing the `s3:ListBucket` action.
 - `AWSLambdaBasicExecutionRole`: Provides the Lambda function with permissions to write logs to CloudWatch Logs.
 
 **IAM Role**
@@ -26,7 +26,7 @@ For example:
 ```
 
 **Response**
-Upon successful execution, the Lambda function returns a JSON response containing the status code and a list of S3 bucket names.
+On successful execution, the Lambda function returns a JSON response containing the status code and a list of S3 bucket names.
 
 Example response:
 ```json

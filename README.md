@@ -19,8 +19,8 @@ The project will deploy the following serverless resources on AWS:
 
 - S3 Buckets: Configured with ACLs disabled, versioning enabled, and EventBridge notifications enabled.
 - Lambda Functions: Serverless functions written in Python.
-  - Docker deployment example (`/containerised-lambda`)
-  - Zip deployment (`/simple-lambda`)
+  - Docker deployment example (`containerised-lambda`)
+  - Zip deployment example ([`simple-lambda`](https://github.com/rebeccacrompton/aws-serverless-terraform/tree/main/src/lambdas/simple-lambda))
 - State Machine: AWS Step Functions used to orchestrate a workflow.
 - Event Bridge Rule: Triggering a state machine execution when a new file lands in an S3 bucket.
 
